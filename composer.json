@@ -1,0 +1,39 @@
+{
+    "name": "mieproject/posts",
+    "description": "MIE Project - Posts package | Posts and Pages system | use \"mieproject/files\": \"dev-master\"",
+    "type": "package",
+    "license": "MIT",
+    "authors": [],
+    "autoload": {
+        "psr-4": {
+            "MieProject\\Posts\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MieProject\\Posts\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MieProject\\Posts\\PostsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "require": {
+        "spatie/laravel-sluggable": "^2.6"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
