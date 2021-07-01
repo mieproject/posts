@@ -1,6 +1,6 @@
 {
     "name": "mieproject/posts",
-    "description": "MIE Project - Posts package | Posts and Pages system | use \"mieproject/files\": \"dev-master\"",
+    "description": "MIE Project - Posts package | Posts and Pages system",
     "type": "package",
     "license": "MIT",
     "authors": [],

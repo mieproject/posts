@@ -1,3 +1,3 @@
 
 # mieproject/settings
-    composer require mieproject/project-initialization
+    composer require mieproject/posts
