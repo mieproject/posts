@@ -33,8 +33,13 @@ class PostsServiceProvider extends ServiceProvider
         (new playWithFiles)->run();
 
         $this->publishResources();
-        //
+        $this->loadRoutesFrom(__DIR__."/routes/web.php");
+        $this->loadViewsFrom(__DIR__.'/views', 'mie-posts');
 
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+
+
+//        mie-posts
     }
 
     protected function publishResources()
