@@ -17,13 +17,13 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
 
-            $table->string('name');
+            $table->json('name'); // json => translate // or you can use longText
             $table->string('slug')->nullable();
             $table->longText('content');
 
             $table->json('tags'); // – array of tags id
+            $table->json('categories'); // – array of categories id
 
-            $table->unsignedBigInteger('thumbnail')->nullable(null);
 
             $table->string('status')->default('publish'); // – status of the post, e.g. ‘draft’, ‘pending’, ‘private’, ‘publish’.
             $table->string('password')->nullable(null);

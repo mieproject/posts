@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Spatie\Translatable\HasTranslations;
 
 class Tag extends Model
 {
-    use HasFactory,HasSlug;
+    use HasFactory,HasSlug,HasTranslations;
+    public $translatable = ['name'];
 
     /**
      * Get the options for generating the slug.

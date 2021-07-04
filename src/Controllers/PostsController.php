@@ -13,6 +13,7 @@ class PostsController extends Controller
 
     public function dash_create()
     {
-        return view('mie-posts::admin.create');
+        $post_statuses = ['publish','pending','draft','private'];
+        return view('mie-posts::admin.create',compact('post_statuses'));
     }
 }

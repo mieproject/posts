@@ -17,14 +17,14 @@ class CreateUrlLinksTable extends Migration
             $table->id();
             $table->text('hash');
             $table->text('url');
-            $table->string('name')->nullable();
+            $table->json('name')->nullable();
             $table->string('target'); // the target frame for the link. e.g. _blank, _top, _none.
             $table->string('notes')->nullable();
-            $table->string('description')->nullable();
+            $table->json('description')->nullable();
             $table->boolean('visible')->default(1);
             $table->unsignedBigInteger('user_id');// – ID of user who created the link.
             $table->json('rel');  // – IDs of posts or pages or comments etc. have this link.
-            $table->integer('rating'); // – ID of user who created the link.
+            $table->integer('rating'); // 0-10
             $table->text('thumbnail_url')->nullable(null);
 
             $table->timestamps();

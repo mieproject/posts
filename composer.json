@@ -33,7 +33,8 @@
     },
     "require": {
         "spatie/laravel-sluggable": "^2.6",
-        "mieproject/files": "dev-master"
+        "mieproject/files": "dev-master",
+        "spatie/laravel-translatable": "^4.6"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

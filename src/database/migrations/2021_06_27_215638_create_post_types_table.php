@@ -15,7 +15,7 @@ class CreatePostTypesTable extends Migration
     {
         Schema::create('post_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // post,page,portfolio,etc...
+            $table->json('name'); // post,page,portfolio,etc...
             $table->string('prefix'); # /blog - /page - /
             $table->timestamps();
         });

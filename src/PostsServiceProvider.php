@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class PostsServiceProvider extends ServiceProvider
 {
@@ -39,9 +40,16 @@ class PostsServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
 
+
+        $this->publishDirectives();
+
+
+
 //        mie-posts
     }
 
+    protected function publishDirectives(){
+    }
     protected function publishResources()
     {
 //        $this->publishes([
